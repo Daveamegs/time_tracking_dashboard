@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main id="main">
+    <ProfileBoard />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProfileBoard from './components/ProfileBoard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProfileBoard
   }
 }
 </script>

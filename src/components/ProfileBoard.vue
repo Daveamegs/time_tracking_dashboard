@@ -7,19 +7,68 @@
     </section>
 
     <section class="timeframe">
-      <h4 class="daily">Daily</h4>
-      <h4 class="weekly active">Weekly</h4>
-      <h4 class="monthly">Monthly</h4>
+      <h4 class="daily" 
+        @click="getDailyStats()"
+        :class="{active : isDaily() }"
+        >Daily</h4>
+
+      <h4 class="weekly" 
+        @click="getWeeklyStats()"
+        :class="{active : isWeekly()}"
+        >Weekly</h4>
+
+      <h4 class="monthly" 
+        @click="getMonthlyStats()"
+        :class="{active: isMonthly()}"
+        >Monthly</h4>
     </section>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'ProfileBoard',
   props: {
     msg: String
-  }
+  },
+
+  methods: {
+    getDailyStats(){
+      this.$store.dispatch("getDailyStats")
+    },
+
+    getWeeklyStats(){
+      this.$store.dispatch("getWeeklyStats")
+    },
+
+    getMonthlyStats(){
+      this.$store.dispatch("getMonthlyStats")
+    },
+
+    isDaily(){
+      if (this.timeFrame == "daily"){
+        return true
+      }
+    },
+
+    isWeekly() {
+      if (this.timeFrame == "weekly") {
+        return true
+      }
+    },
+
+    isMonthly() {
+      if (this.timeFrame == "monthly") {
+        return true
+      }
+    }
+  },
+
+  computed: mapState([
+    "timeFrame"
+  ])
 }
 </script>
 

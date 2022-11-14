@@ -38,6 +38,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(226, 43%, 10%);
 
   // #profile-board{
   //   flex: 30%;

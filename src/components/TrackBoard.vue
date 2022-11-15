@@ -10,22 +10,22 @@
                 class="outer-card"
             >
                 <div class="inner-card">
-                <div class="activity-menu">
-                    <h5 class="card-title">{{data.title}}</h5>
-                    <img class="ellipsis" src="../assets/icon-ellipsis.svg" alt="" srcset="">
-                </div>
-                <div class="hours" v-if="timeFrame == 'weekly'">
-                    <h1 class="current-hours">{{data.timeframes.weekly.current}}hrs</h1>
-                    <h6 class="last-week-hours">Lask Week - {{data.timeframes.weekly.previous}}hrs</h6>
-                </div>
-                <div class="hours" v-if="timeFrame == 'daily'">
-                    <h1 class="current-hours">{{data.timeframes.daily.current}}hrs</h1>
-                    <h6 class="last-week-hours">Yesterday - {{data.timeframes.daily.previous}}hrs</h6>
-                </div>
-                <div class="hours" v-if="timeFrame == 'monthly'">
-                    <h1 class="current-hours">{{data.timeframes.monthly.current}}hrs</h1>
-                    <h6 class="last-week-hours">Last Month - {{data.timeframes.monthly.previous}}hrs</h6>
-                </div>
+                    <div class="activity-menu">
+                        <h5 class="card-title">{{data.title}}</h5>
+                        <img class="ellipsis" src="../assets/icon-ellipsis.svg" alt="" srcset="">
+                    </div>
+                    <div class="hours" v-if="timeFrame == 'weekly'">
+                        <h1 class="current-hours">{{data.timeframes.weekly.current}}hrs</h1>
+                        <h6 class="last-week-hours">Lask Week - {{data.timeframes.weekly.previous}}hrs</h6>
+                    </div>
+                    <div class="hours" v-if="timeFrame == 'daily'">
+                        <h1 class="current-hours">{{data.timeframes.daily.current}}hrs</h1>
+                        <h6 class="last-week-hours">Yesterday - {{data.timeframes.daily.previous}}hrs</h6>
+                    </div>
+                    <div class="hours" v-if="timeFrame == 'monthly'">
+                        <h1 class="current-hours">{{data.timeframes.monthly.current}}hrs</h1>
+                        <h6 class="last-week-hours">Last Month - {{data.timeframes.monthly.previous}}hrs</h6>
+                    </div>
                 </div>
             </div>
         </template>
@@ -148,7 +148,7 @@ export default{
     gap: 15px;
 
     #work{
-        background-color: hsl(15, 100%, 70%) !important;
+        background-color: hsl(15, 100%, 70%);
         background-image: url("../assets/icon-work.svg");
         // background-size: ;
         background-repeat: no-repeat;
@@ -191,15 +191,12 @@ export default{
     }
 
     .outer-card{
-        width: 170px;
-        height: 180px;
+        width: 160px;
+        height: 170px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         margin: 0;
-        // background-color: hsl(15, 100%, 70%);
-        // opacity: 0.2;
-        border-radius: 15px;
+        border-radius: 18px;
 
         .inner-card{
             * {
@@ -255,6 +252,27 @@ export default{
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 735px){
+    #trackboard{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        width: 100%;
+
+        .outer-card{
+            width: 100%;
+
+            .inner-card > .hours{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+
     }
 }
 </style>

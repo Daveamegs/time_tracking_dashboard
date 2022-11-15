@@ -1,9 +1,11 @@
 <template>
   <div id="profile">
     <section class="image-container">
-      <img src="../assets/image-jeremy.png" alt="" srcset="">
-      <h6 class="report-for">Report for</h6>
-      <h1 class="profile-name">Jeremy Robson</h1>
+      <img src="../assets/image-jeremy.png" alt="Profile" srcset="">
+      <div class="name-div">
+        <h6 class="report-for">Report for</h6>
+        <h1 class="profile-name">Jeremy Robson</h1>
+      </div>
     </section>
 
     <section class="timeframe">
@@ -78,13 +80,13 @@ export default {
   // flex: 30%;
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
-  height: 400px;
+  height: 375px;
   margin-right: 20px;
 
   .image-container{
     height: 260px;
     padding: 20px;
-    width: 200px;
+    width: 180px;
     border-radius: 15px;
     background-color: hsl(246, 80%, 60%);
     color: #fff;
@@ -119,6 +121,7 @@ export default {
     .daily{
       font-weight: 200;
       cursor: pointer;
+      margin: 10px 0px;
 
       &:hover{
         color: #fff;
@@ -128,6 +131,7 @@ export default {
     .weekly {
       font-weight: 200;
       cursor: pointer;
+      margin: 15px 0px;
       
       &:hover {
         color: #fff;
@@ -137,6 +141,7 @@ export default {
     .monthly{
       font-weight: 200;
       cursor: pointer;
+      margin: 10px 0px;
       
       &:hover {
         color: #fff;
@@ -146,4 +151,44 @@ export default {
   }
 
 }
+
+ @media only screen and (max-width: 735px) {
+   #profile {
+     height: 180px;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     justify-items: center;
+     margin-right: 0px;
+
+     .image-container {
+       height: 120px;
+       width: inherit;
+       display: flex;
+       align-items: center;
+       justify-items: center;
+
+      .report-for{
+        margin-top: 0px;
+      }
+       .profile-name {
+          margin-top: 0px;
+          font-size: 1.8em;
+          // font-weight: 400;
+        }
+
+        .name-div{
+          margin-left: 15px;
+        }
+     }
+
+     .timeframe{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+     }
+   }
+
+ }
 </style>

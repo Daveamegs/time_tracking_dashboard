@@ -4,7 +4,7 @@
       <img src="../assets/image-jeremy.png" alt="Profile">
       <div class="name-div">
         <h6 class="report-for">Report for</h6>
-        <h1 class="profile-name">Jeremy Robson</h1>
+        <div class="profile-name">Jeremy Robson</div>
       </div>
     </section>
 

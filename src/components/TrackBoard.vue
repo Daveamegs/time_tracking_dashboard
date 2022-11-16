@@ -12,18 +12,18 @@
                 <div class="inner-card">
                     <div class="activity-menu">
                         <h5 class="card-title">{{data.title}}</h5>
-                        <img class="ellipsis" src="../assets/icon-ellipsis.svg" alt="" srcset="">
+                        <img class="ellipsis" src="../assets/icon-ellipsis.svg" alt="ellipsis">
                     </div>
                     <div class="hours" v-if="timeFrame == 'weekly'">
-                        <h1 class="current-hours">{{data.timeframes.weekly.current}}hrs</h1>
+                        <div class="current-hours">{{data.timeframes.weekly.current}}hrs</div>
                         <h6 class="last-week-hours">Lask Week - {{data.timeframes.weekly.previous}}hrs</h6>
                     </div>
                     <div class="hours" v-if="timeFrame == 'daily'">
-                        <h1 class="current-hours">{{data.timeframes.daily.current}}hrs</h1>
+                        <div class="current-hours">{{data.timeframes.daily.current}}hrs</div>
                         <h6 class="last-week-hours">Yesterday - {{data.timeframes.daily.previous}}hrs</h6>
                     </div>
                     <div class="hours" v-if="timeFrame == 'monthly'">
-                        <h1 class="current-hours">{{data.timeframes.monthly.current}}hrs</h1>
+                        <div class="current-hours">{{data.timeframes.monthly.current}}hrs</div>
                         <h6 class="last-week-hours">Last Month - {{data.timeframes.monthly.previous}}hrs</h6>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <template>
   <div id="profile">
     <section class="image-container">
-      <img src="../assets/image-jeremy.png" alt="Profile" srcset="">
+      <img src="../assets/image-jeremy.png" alt="Profile">
       <div class="name-div">
         <h6 class="report-for">Report for</h6>
         <h1 class="profile-name">Jeremy Robson</h1>
